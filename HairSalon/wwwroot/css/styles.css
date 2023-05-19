@@ -10,37 +10,24 @@ div#footer {
 }
 
 body {
-	background-color: whitesmoke;
-}
-
-body {
 	background-color: #f7f7f7;
-	font-family: Arial, sans-serif;
 }
 
 h1 {
 	color: #333;
 	font-size: 28px;
-	text-align: center;
 	margin-top: 20px;
+	text-decoration: underline;
+	font-family: 'Playfair Display', serif;
 }
 
-button {
-	background-color: #4caf50;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 10px 5px;
-	cursor: pointer;
-	border-radius: 5px;
+h2 {
+	font-family: 'Montserrat', sans-serif;
 }
 
-button:hover {
-	background-color: #45a049;
+p{
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -50,4 +37,12 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+li {
+	text-align: left;
 }
