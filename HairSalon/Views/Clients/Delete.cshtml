@@ -2,11 +2,11 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.Stylist
+@model HairSalon.Models.Client
 
 <h2>Are you sure you want to delete this?</h2>
 
-@Html.DisplayNameFor(model => model.StylistName): @Html.DisplayFor(model => model.StylistName)
+@Html.DisplayNameFor(model => model.ClientName): @Html.DisplayFor(model => model.ClientName)
 @using (Html.BeginForm())
 {
   <input type="submit" value="Delete" />
