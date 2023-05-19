@@ -4,18 +4,28 @@
 
 @model HairSalon.Models.Stylist
 
-<h2>Edit</h2>
+<div class="container">
+    <div class="card text-center">
+        <div class="card-body">
+            <h4>Edit this Stylist: @Html.DisplayFor(model => model.StylistName)</h4>
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    @Html.HiddenFor(model => model.StylistId)
 
-<h4>Edit this Stylist: @Html.DisplayFor(model => model.StylistName)</h4>
-
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.StylistId)
-
-    @Html.LabelFor(model => model.StylistName)
-    @Html.EditorFor(model => model.StylistName)
-    @Html.LabelFor(model => model.Speciality)
-    @Html.EditorFor(model => model.Speciality)
-    <input type="submit" value="Save" />
-}
-<p>@Html.ActionLink("Back to list", "Index")</p>
+                    @Html.LabelFor(model => model.StylistName)
+                    @Html.EditorFor(model => model.StylistName)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Speciality)
+                    @Html.EditorFor(model => model.Speciality)
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            }
+            <p>@Html.ActionLink("Back to List", "Index")</p>
+        </div>
+    </div>
+</div>

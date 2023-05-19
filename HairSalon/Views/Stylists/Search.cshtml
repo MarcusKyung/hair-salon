@@ -4,14 +4,23 @@
 
 @model HairSalon.Models.Stylist
 
-<h4>Search stylists</h4>
-@using (Html.BeginForm("Results", "Stylists", FormMethod.Post))
-{
-  @Html.LabelFor(model => model.StylistName)
-  @Html.TextBoxFor(model => model.StylistName)
-
-  <input type="submit" value="Search stylists" class="btn btn-primary"/>
-}
-<p>@Html.ActionLink("Add new stylist", "Create")</p>
-<p>@Html.ActionLink("Add new client", "Create", "Clients")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<div class="container">
+    <div class="card text-center">
+        <div class="card-body">
+            <h4>Search stylists</h4>
+            @using (Html.BeginForm("Results", "Stylists", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.StylistName)
+                    @Html.TextBoxFor(model => model.StylistName)
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Search stylists" class="btn btn-primary" />
+                </div>
+            }
+            <p>@Html.ActionLink("Add new stylist", "Create")</p>
+            <p>@Html.ActionLink("Add new client", "Create", "Clients")</p>
+            <p>@Html.ActionLink("Home", "Index", "Home")</p>
+        </div>
+    </div>
+</div>

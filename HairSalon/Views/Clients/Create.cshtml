@@ -4,16 +4,31 @@
 
 @model HairSalon.Models.Client
 
-<p><strong>NOTE:</strong> You need to have at least one stylist before you can add a client.</p>
-<p>Click @Html.ActionLink("this page", "Create", "Stylists") to create a stylist.</p>
+<div class="container">
+    <div class="card text-center">
+        <div class="card-body">
+            <h4><strong>NOTE:</strong> You need to have at least one stylist before you can add a client.</h4>
+            <h5>Click @Html.ActionLink("this page", "Create", "Stylists") to create a stylist.</h5>
 
-<h4>Add a new client:</h4>
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.ClientName)
-  @Html.TextBoxFor(model => model.ClientName)
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-  <input type="submit" value="Add new clients" class="btn btn-primary"/>
-}
-<p>@Html.ActionLink("Show all clients", "Index")</p>
+            <h4>Add a new client:</h4>
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ClientName)
+                    @Html.TextBoxFor(model => model.ClientName)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Stylist)
+                    @Html.DropDownList("StylistId")
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Add New Client" class="btn btn-primary" />
+                </div>
+            }
+            <p>@Html.ActionLink("Show All Clients", "Index")</p>
+        </div>
+    </div>
+</div>
