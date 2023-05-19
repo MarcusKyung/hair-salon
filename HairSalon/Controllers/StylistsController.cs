@@ -78,11 +78,11 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost]
-    public ActionResult Results(string stylistName)
+    public ActionResult Results(string StylistName)
     {
       Stylist thisStylist = _db.Stylists
                                   .Include(stylist => stylist.Clients)
-                                  .FirstOrDefault(stylist => stylist.StylistName == stylistName);
+                                  .FirstOrDefault(stylist => stylist.StylistName == StylistName);
       if (thisStylist != null)
       {
         return View(thisStylist);
