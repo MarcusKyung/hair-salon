@@ -19,7 +19,7 @@ This EF Core C# Web application is designed for Eau Claire's hair salon and allo
 
 1. Clone this repo from GH to your local machine.
 2. In root directory of the file called HairSalon.Solution, add a file titled ```appsettings.json```. Include this line of code ```{"ConnectionStrings": {"DefaultConnection":"Server=localhost;Port=3306;database=[YOUR_DATA_BASE_HERE];uid=[YOUR_USER_ID_HERE];pwd=[YOUR_PASSWORD_HERE];"}}```
-3. Download SQL. Import the SQL database included in this project's repository. 
+3. Launch MySQL Workbench. In the Navigator > Administration window, select Data Import/Restore. In Import Options select Import from Self-Contained File. Select the SQL Database included in this repository using the file navigator button (```...```). Under Default Schema to be Imported To, select the New button and enter the name of your database. Select "Start Import" at bottom right.
 4. Update the ```appsettings.json``` file with your SQL details, replacing [YOUR_DATA_BASE_HERE], [YOUR_USER_ID_HERE], and [YOUR_PASSWORD_HERE]. 
 5. Using your device's terminal navigate to the "HairSalon" directory and use command ```dotnet restore``` to restore project dependencies.
 6. Using your device's terminal use command ```dotnet run``` to run this project in your browser. 
@@ -27,7 +27,7 @@ This EF Core C# Web application is designed for Eau Claire's hair salon and allo
 
 ## Known Bugs
 
-* _No known bugs as of 5/19/23._
+* _No known bugs as of 5/18/23._
 
 ## License
 
